@@ -15,6 +15,7 @@ namespace EF_core1
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
+            //Microsoft.EntityFrameworkCore.SqlServer
             optionsBuilder.UseSqlServer("Server=.;Database=demo1;Trusted_Connection=True;MultipleActiveResultSets=true");
         }
 
