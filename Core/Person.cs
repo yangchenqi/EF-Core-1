@@ -10,5 +10,8 @@ namespace EF_core1
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public string BirthPlace { get; set; }
+        //新加一列，然后运行add-migration Add_BirthPlace命令，会根据实体类生成对应的表和字段
+        //然后再运行update-database命令，同步到数据库
     }
 }

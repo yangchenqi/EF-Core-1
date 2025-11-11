@@ -11,18 +11,18 @@ namespace EF_core1
     {
         public DbSet<Book> Books { get; set; }
         public DbSet<Person> Persons { get; set; }
-
+        public DbSet<Cats> Cats { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
             //Microsoft.EntityFrameworkCore.SqlServer
-            optionsBuilder.UseSqlServer("Server=.;Database=demo1;Trusted_Connection=True;MultipleActiveResultSets=true");
+            optionsBuilder.UseSqlServer("Server=.;Database=demo;Trusted_Connection=True;MultipleActiveResultSets=true;TrustServerCertificate=True");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            //从当前程序集加载所有的
+            //从当前程序集加载所有的IEntityTypeConfiguration
             modelBuilder.ApplyConfigurationsFromAssembly(this.GetType().Assembly);
         }
     }
