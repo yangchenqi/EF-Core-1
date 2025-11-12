@@ -12,6 +12,7 @@ namespace EF_core1
         public DbSet<Book> Books { get; set; }
         public DbSet<Person> Persons { get; set; }
         public DbSet<Cats> Cats { get; set; }
+        public DbSet<Bird> Birds { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);

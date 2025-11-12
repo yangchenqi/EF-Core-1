@@ -11,7 +11,7 @@ namespace EF_core1
         //先建实体类，再建config类，最后dbcontext里连接数据库加载配置
         public long Id { get; set; }
         public string Title { get; set; }
-        public DateTime PubTime { get; set; }
+        public DateTime? PubTime { get; set; }
         public string Price { get; set; }
         public string AuthorName { get; set; }
     }

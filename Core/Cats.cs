@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace EF_core1
 {
+    //Data Annotations 特性配置实体类映射到数据库表的信息
     [Table("T_Cats")]
     //把配置以特性的形式写在实体类上
     public class Cats
